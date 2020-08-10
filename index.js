@@ -6,11 +6,6 @@ const editButton = document.getElementsByClassName("edit-todo");
 const deleteButton = document.getElementsByClassName("delete-todo");
 
 
-
-// functions Edit
-
-
-
 // functions Delete
 
 Object.keys(deleteButton).forEach(function (key){
@@ -20,34 +15,42 @@ Object.keys(deleteButton).forEach(function (key){
     })
 })
 
+// Add Input and Buttons
 
 addButton.addEventListener('click', (event) =>{
     event.preventDefault();
+
+    let liWrapper = document.createElement('div');
+    liWrapper.className += "li-wrapper d-flex";
+    boxUl.appendChild(liWrapper);
+    
     let inputText = input.value;
     let newLi = document.createElement('li');
     let newLiText = document.createTextNode(inputText);
 
-    boxUl.appendChild(newLi);
+    liWrapper.appendChild(newLi);
+    newLi.className += "form-control";
     let newLiWhole = newLi.appendChild(newLiText); //new li with text
 
     let editButtonNew=document.createElement('button');
-    editButtonNew.className += "edit-todo";
+    editButtonNew.className += "edit-todo btn btn-primary";
     editButtonNewText = document.createTextNode('Edit');
     editButtonNew.appendChild(editButtonNewText);
-    boxUl.appendChild(editButtonNew);
+    liWrapper.appendChild(editButtonNew);
 
     let deleteButtonNew=document.createElement('button');
-    deleteButtonNew.className += "delete-todo";
+    deleteButtonNew.className += "delete-todo btn btn-danger";
     deleteButtonNewText = document.createTextNode('Delete');
     deleteButtonNew.appendChild(deleteButtonNewText);
+    liWrapper.appendChild(deleteButtonNew);
 
-    boxUl.appendChild(deleteButtonNew);
+    newLiWhole.style.marginRight = "4px"; //space between new Buttons
 
-
-
-    console.log(newLi);
+    /* console.log(newLi);
     console.log(newLiText);
     console.log(editButtonNew);
-    console.log(deleteButtonNew);
+    console.log(deleteButtonNew); */
 })
 
+//End
+  

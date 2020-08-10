@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fforbestechcouncil%2Ffiles%2F2019%2F01%2Fcanva-photo-editor-8-7.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+h2 {
+    color: white;
+    font-size: 42px;
+    text-shadow: 0 0 5px black;
+}
+
+#new-item {
+    width: 400px;
+}
+
+#box-input-text {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+ul {
+    width: 400px;
+    margin-top: 20px;
+}
+
+li {
+    margin-top: 15px;
+}
+
+.edit-todo, .delete-todo {
+    margin-left: 20px;
+}
+
+.li-wrapper {
+    margin-bottom: 15px;
+}
+
+
