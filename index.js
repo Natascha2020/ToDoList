@@ -6,6 +6,21 @@ const editButton = document.getElementsByClassName("edit-todo");
 const deleteButton = document.getElementsByClassName("delete-todo");
 
 
+
+// functions Edit
+
+
+
+// functions Delete
+
+Object.keys(deleteButton).forEach(function (key){
+    addEventListener('click', (e) => {
+        let remove = e.target.parentElement;
+        boxUl.removeChild(remove);
+    })
+})
+
+
 addButton.addEventListener('click', (event) =>{
     event.preventDefault();
     let inputText = input.value;
@@ -35,3 +50,4 @@ addButton.addEventListener('click', (event) =>{
     console.log(editButtonNew);
     console.log(deleteButtonNew);
 })
+
