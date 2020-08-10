@@ -15,24 +15,37 @@
   <body>
     <div id="box-input-text" class="container">
         <h2>My To Do Stuff</h2>
-        <input type="text" id="new-item" placeholder="ToDo...">
-        <button id="add-todo">Add</button>
+        <input type="text" id="new-item" class="form-control" placeholder="<ToDo>...</ToDo>">
+        <button type="button" id="add-todo" class="btn btn-success">Add</button>
     </div>
       
-    <ul id="list-todo">
-        <li>Have dinner</li>
-        <button class="edit-todo">Edit</button>
-        <button class="delete-todo">Delete</button>
-        <li>Pay bills</li>
-        <button class="edit-todo">Edit</button>
-        <button class="delete-todo">Delete</button>
-        <li>Do the exercise</li>
-        <button class="edit-todo">Edit</button>
-        <button class="delete-todo">Delete</button>
-        <li>Attend WBS's class</li>
-        <button class="edit-todo">Edit</button>
-        <button class="delete-todo">Delete</button>
+    <div id="ul-wrapper">
+      <ul id="list-todo">
+        <div class="li-wrapper d-flex">
+          <li class="form-control">Have dinner</li>
+          <button type="button" class="edit-todo btn btn-primary">Edit</button>
+          <button type="button" class="delete-todo btn btn-danger">Delete</button>
+       </div>
+
+       <div class="li-wrapper d-flex">
+          <li class="form-control">Pay bills</li>
+          <button type="button" class="edit-todo btn btn-primary">Edit</button>
+          <button type="button" class="delete-todo btn btn-danger">Delete</button>
+       </div>
+
+       <div class="li-wrapper d-flex">
+          <li class="form-control">Do the exercise</li>
+          <button type="button" class="edit-todo btn btn-primary">Edit</button>
+          <button type="button" class="delete-todo btn btn-danger">Delete</button>
+       </div>
+
+        <div class="li-wrapper d-flex">
+          <li class="form-control">Attend WBS's class</li>
+          <button type="button" class="edit-todo btn btn-primary">Edit</button>
+          <button type="button" class="delete-todo btn btn-danger">Delete</button>
+       </div>
       </ul>
+    </div>
 
     <!-- Optional JavaScript -->
       <script src="index.js"></script>
