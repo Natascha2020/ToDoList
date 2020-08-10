@@ -6,7 +6,16 @@ const editButton = document.getElementsByClassName("edit-todo");
 const deleteButton = document.getElementsByClassName("delete-todo");
 
 
-//Add ToDo-Item with Text and Button
+// functions Delete
+
+Object.keys(deleteButton).forEach(function (key){
+    addEventListener('click', (e) => {
+        let remove = e.target.parentElement;
+        boxUl.removeChild(remove);
+    })
+})
+
+// Add Input and Buttons
 
 addButton.addEventListener('click', (event) =>{
     event.preventDefault();
@@ -44,3 +53,4 @@ addButton.addEventListener('click', (event) =>{
 })
 
 //End
+  
