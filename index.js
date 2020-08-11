@@ -7,8 +7,8 @@ const deleteButton = document.getElementsByClassName("delete-todo");
 
 // fuction Edit
 
-Object.keys(editButton).forEach(function (key) {
-  addEventListener("click", (e) => {
+Object.keys(editButton).forEach((key) => {
+  editButton[key].addEventListener("click", (e) => {
     if (e.target.classList.contains("edit-todo")) {
       let editorText = e.target.previousSibling.previousSibling;
       editorText.contentEditable = true;
@@ -20,8 +20,8 @@ Object.keys(editButton).forEach(function (key) {
   });
 });
 
-Object.keys(editButton).forEach(function (key) {
-  addEventListener("dblclick", (e) => {
+Object.keys(editButton).forEach((key) => {
+  editButton[key].addEventListener("dblclick", (e) => {
     if (e.target.classList.contains("edit-todo")) {
       let editorText = e.target.previousSibling.previousSibling;
       editorText.contentEditable = false;
@@ -31,8 +31,8 @@ Object.keys(editButton).forEach(function (key) {
 
 // functions Delete
 
-Object.keys(deleteButton).forEach(function (key) {
-  addEventListener("click", (e) => {
+Object.keys(deleteButton).forEach((key) => {
+  deleteButton[key].addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-todo")) {
       if (confirm("Sure you are done?")) {
         let remove = e.target.parentElement;
