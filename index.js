@@ -60,12 +60,14 @@ addButton.addEventListener("click", (event) => {
   let newLiWhole = newLi.appendChild(newLiText); //new li with text
 
   let editButtonNew = document.createElement("button");
+  editButtonNew.type = "button";
   editButtonNew.className += "edit-todo btn btn-primary";
   editButtonNewText = document.createTextNode("Edit");
   editButtonNew.appendChild(editButtonNewText);
   liWrapper.appendChild(editButtonNew);
 
   let deleteButtonNew = document.createElement("button");
+  deleteButtonNew.type = "button";
   deleteButtonNew.className += "delete-todo btn btn-danger";
   deleteButtonNewText = document.createTextNode("Delete");
   deleteButtonNew.appendChild(deleteButtonNewText);
