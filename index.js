@@ -12,6 +12,7 @@ Object.keys(editButton).forEach(function (key) {
     if (e.target.classList.contains("edit-todo")) {
       let editorText = e.target.previousSibling.previousSibling;
       editorText.contentEditable = true;
+      editorText.focus();
     }
     if (editorText.innerText.trim().length >= 10) {
       e.preventDefault();
