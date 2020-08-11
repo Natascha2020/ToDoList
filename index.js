@@ -6,12 +6,24 @@ const editButton = document.getElementsByClassName("edit-todo");
 const deleteButton = document.getElementsByClassName("delete-todo");
 
 
+// fuction Edit
+
+Object.keys(editButton).forEach(function (key){
+    addEventListener('click', (e) => {
+        if(e.target.classList.contains('edit-todo')){
+        let editorText = e.target.previousSibling.previousSibling;
+        editorText.contentEditable = true;
+        }
+    })
+})     
+
 // functions Delete
 
 Object.keys(deleteButton).forEach(function (key){
     addEventListener('click', (e) => {
+        if(e.target.classList.contains('delete-todo')){
         let remove = e.target.parentElement;
-        boxUl.removeChild(remove);
+        boxUl.removeChild(remove);}
     })
 })
 
@@ -43,8 +55,6 @@ addButton.addEventListener('click', (event) =>{
     deleteButtonNewText = document.createTextNode('Delete');
     deleteButtonNew.appendChild(deleteButtonNewText);
     liWrapper.appendChild(deleteButtonNew);
-
-    newLiWhole.style.marginRight = "4px"; //space between new Buttons
 
     /* console.log(newLi);
     console.log(newLiText);
