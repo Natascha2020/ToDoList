@@ -36,6 +36,13 @@ addButton.addEventListener("click", (event) => {
   deleteButtonNewText = document.createTextNode("Delete");
   deleteButtonNew.appendChild(deleteButtonNewText);
   liWrapper.appendChild(deleteButtonNew);
+
+  deleteButtonNew.addEventListener("click", (e) => {
+    if (confirm("Sure you are done?")) {
+      let remove = e.target.parentElement;
+      boxUl.removeChild(remove);
+    }
+  });
 });
 
 // fuction Edit
@@ -64,7 +71,7 @@ Object.keys(editButton).forEach((key) => {
 
 // functions Delete
 
-Object.keys(editButton).forEach((key) => {
+Object.keys(deleteButton).forEach((key) => {
   deleteButton[key].addEventListener("click", (e) => {
     if (e.target.classList.contains("delete-todo")) {
       if (confirm("Sure you are done?")) {
