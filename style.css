@@ -14,28 +14,13 @@ h2 {
   margin-bottom: 40px;
 }
 
-#new-item {
-  width: 400px;
-}
-
-#box-input-text {
-  margin-top: 50px;
-  margin-bottom: 50px;
+li {
+  margin-top: 15px;
 }
 
 ul {
   width: 700px;
   margin-top: 20px;
-}
-
-li {
-  margin-top: 15px;
-}
-
-.edit-todo,
-.delete-todo {
-  margin-left: 20px;
-  margin-top: 15px;
 }
 
 #add-todo {
@@ -44,15 +29,35 @@ li {
   font-weight: bold;
 }
 
+#box-input-text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#new-item {
+  width: 400px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.edit-todo,
+.delete-todo {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.form-control {
+  display: block;
+  width: 700px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .li-wrapper {
   margin-bottom: 15px;
 }
 
 .ul-wrapper {
   width: 100%;
-}
-
-#new-item {
-  font-weight: bold;
-  font-size: 18px;
 }
