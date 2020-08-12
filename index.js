@@ -44,10 +44,10 @@ addButton.addEventListener("click", (event) => {
     }
   });
 
-  editButton[key].addEventListener("dblclick", (e) => {
+  /* editButton[key].addEventListener("dblclick", (e) => {
     let editorText = e.target.previousSibling.previousSibling;
     editorText.contentEditable = false;
-  });
+  }); */
 });
 
 // fuction Edit
