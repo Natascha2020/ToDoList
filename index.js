@@ -47,7 +47,7 @@ addButton.addEventListener("click", (event) => {
     let newText = e.target.parentElement.firstChild;
     newText.contentEditable = true;
     newText.focus();
-    console.log(newText);
+    newText.setAttribute("data-maxlength", "20");
   });
 
   editButtonNew.addEventListener("dblclick", (e) => {
@@ -65,7 +65,7 @@ Object.keys(editButton).forEach((key) => {
       editorText.contentEditable = true;
       editorText.focus();
     }
-    if (editorText.innerText.trim().length >= 10) {
+    if (editorText.innerText.length >= 10) {
       e.preventDefault();
     }
   });
