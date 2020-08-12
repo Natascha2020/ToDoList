@@ -43,6 +43,11 @@ addButton.addEventListener("click", (event) => {
       boxUl.removeChild(remove);
     }
   });
+
+  /* editButton[key].addEventListener("dblclick", (e) => {
+    let editorText = e.target.previousSibling.previousSibling;
+    editorText.contentEditable = false;
+  }); */
 });
 
 // fuction Edit
@@ -81,4 +86,7 @@ Object.keys(deleteButton).forEach((key) => {
     }
   });
 });
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8ff8ac7c1ac0d9610816d11b68244f7e8d380ea6
