@@ -9,7 +9,7 @@
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
-// Constant Declaration
+// - Constant Declaration -
 
 const input = document.getElementById("new-item");
 const addButton = document.getElementById("add-todo");
@@ -57,7 +57,8 @@ addButton.addEventListener("click", (event) => {
   deleteButtonNew.appendChild(deleteButtonNewText);
   liWrapper.appendChild(deleteButtonNew);
 
-  // - Delete function addressing new added items -
+// - Delete function addressing new added items -
+  
   // This alert user about removing new items after clicking on delete button
   deleteButtonNew.addEventListener("click", (e) => {
     if (confirm("Sure you are done?")) {
@@ -66,7 +67,7 @@ addButton.addEventListener("click", (event) => {
     }
   });
 
-  //  - Edit function addressing new added items -
+// - Edit function addressing new added items -
   
   // This make li editable once clicked on edit button and focus the li tag
   editButtonNew.addEventListener("click", (e) => {
