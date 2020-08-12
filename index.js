@@ -20,7 +20,6 @@ addButton.addEventListener("click", (event) => {
 
   liWrapper.appendChild(newLi);
   newLi.className += "form-control";
-  newLi.setAttribute("contenteditable", "true");
   let newLiWhole = newLi.appendChild(newLiText); //new li with text
 
   let editButtonNew = document.createElement("button");
@@ -44,10 +43,17 @@ addButton.addEventListener("click", (event) => {
     }
   });
 
-  /* editButton[key].addEventListener("dblclick", (e) => {
-    let editorText = e.target.previousSibling.previousSibling;
-    editorText.contentEditable = false;
-  }); */
+  editButtonNew.addEventListener("click", (e) => {
+    let newText = e.target.parentElement.firstChild;
+    newText.contentEditable = true;
+    newText.focus();
+    console.log(newText);
+  });
+
+  editButtonNew.addEventListener("dblclick", (e) => {
+    let newText = e.target.parentElement.firstChild;
+    newText.contentEditable = false;
+  });
 });
 
 // fuction Edit
@@ -86,7 +92,3 @@ Object.keys(deleteButton).forEach((key) => {
     }
   });
 });
-<<<<<<< HEAD
-=======
-
->>>>>>> 8ff8ac7c1ac0d9610816d11b68244f7e8d380ea6
