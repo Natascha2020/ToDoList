@@ -1,10 +1,10 @@
-// This js file is structured in the following ways:
+// This index.js file is structured in the following ways:
 
-//   - Constant Declaration: declarations of most importants elements.
-//   - Add function: function that insert a new toDo element, edit and delete buttons + edit and delete
-//     function for new items added to the list
-//   - Edit function: function that modify an existing toDo by pressing the edit button
-//   - Delete function: function that deletes an existing toDo by pressing the delete button
+//   - Constant Declaration: declarations of most importants elements;
+//   - Add function: function that insert a new toDo element, edit and delete buttons. It contains also edit and delete
+//     function for new items added to the list;
+//   - Edit function: function that modify an existing toDo by pressing the edit button;
+//   - Delete function: function that deletes an existing toDo by pressing the delete button;
 //
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
@@ -22,6 +22,7 @@ const deleteButton = document.getElementsByClassName("delete-todo");
 
 // - Add function -
 
+// Listen the addButton 
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -66,6 +67,7 @@ addButton.addEventListener("click", (event) => {
   });
 
   //  - Edit function addressing new added items -
+  
   // This make li editable once clicked on edit button and focus the li tag
   editButtonNew.addEventListener("click", (e) => {
     let newText = e.target.parentElement.firstChild;
@@ -84,6 +86,7 @@ addButton.addEventListener("click", (event) => {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 // - Edit function -
+
 // This make existing li tags editable once clicked on edit button, also focus the li tag
 Object.keys(editButton).forEach((key) => {
   editButton[key].addEventListener("click", (e) => {
@@ -111,6 +114,7 @@ Object.keys(editButton).forEach((key) => {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
 
 // - Delete function -
+
 // This alert user about removing items after clicking on delete button
 Object.keys(deleteButton).forEach((key) => {
   deleteButton[key].addEventListener("click", (e) => {
