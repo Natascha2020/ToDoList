@@ -43,6 +43,11 @@ addButton.addEventListener("click", (event) => {
       boxUl.removeChild(remove);
     }
   });
+
+  editButton[key].addEventListener("dblclick", (e) => {
+    let editorText = e.target.previousSibling.previousSibling;
+    editorText.contentEditable = false;
+  });
 });
 
 // fuction Edit
