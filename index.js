@@ -47,7 +47,7 @@ addButton.addEventListener("click", (event) => {
   editButtonNew.setAttribute("type", "button");
   editButtonNewText = document.createTextNode("Edit");
   editButtonNew.appendChild(editButtonNewText);
-  liWrapper.appendChild(editButtonNew); // new edit button
+  liWrapper.appendChild(editButtonNew);
 
   // New delete button
   let deleteButtonNew = document.createElement("button");
