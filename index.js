@@ -22,7 +22,7 @@ const deleteButton = document.getElementsByClassName("delete-todo");
 
 // - Add function -
 
-// Listen the addButton 
+// Listen the addButton
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -67,13 +67,12 @@ addButton.addEventListener("click", (event) => {
   });
 
   //  - Edit function addressing new added items -
-  
+
   // This make li editable once clicked on edit button and focus the li tag
   editButtonNew.addEventListener("click", (e) => {
     let newText = e.target.parentElement.firstChild;
     newText.contentEditable = true;
     newText.focus();
-    newText.setAttribute("data-maxlength", "20");
   });
 
   // This prevent text changes of the edit button itself once clicked in
@@ -94,9 +93,6 @@ Object.keys(editButton).forEach((key) => {
       let editorText = e.target.previousSibling.previousSibling;
       editorText.contentEditable = true;
       editorText.focus();
-    }
-    if (editorText.innerText.length >= 10) {
-      e.preventDefault();
     }
   });
 });
