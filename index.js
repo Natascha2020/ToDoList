@@ -45,7 +45,7 @@ addButton.addEventListener("click", (event) => {
   let editButtonNew = document.createElement("button");
   editButtonNew.className += "edit-todo btn btn-primary";
   editButtonNew.setAttribute("type", "button");
-  editButtonNewText = document.createTextNode("Edit");
+  let editButtonNewText = document.createTextNode("Edit");
   editButtonNew.appendChild(editButtonNewText);
   liWrapper.appendChild(editButtonNew);
 
@@ -53,12 +53,12 @@ addButton.addEventListener("click", (event) => {
   let deleteButtonNew = document.createElement("button");
   deleteButtonNew.className += "delete-todo btn btn-danger";
   deleteButtonNew.setAttribute("type", "button");
-  deleteButtonNewText = document.createTextNode("Delete");
+  let deleteButtonNewText = document.createTextNode("Delete");
   deleteButtonNew.appendChild(deleteButtonNewText);
   liWrapper.appendChild(deleteButtonNew);
 
-// - Delete function addressing new added items -
-  
+  // - Delete function addressing new added items -
+
   // This alert user about removing new items after clicking on delete button
   deleteButtonNew.addEventListener("click", (e) => {
     if (confirm("Sure you are done?")) {
